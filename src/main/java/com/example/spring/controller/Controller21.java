@@ -1,15 +1,13 @@
 package com.example.spring.controller;
 
-import com.example.spring.dto.c21.MyBean;
-import com.example.spring.dto.c21.MyBean4;
-import com.example.spring.dto.c21.MyBean5;
-import com.example.spring.dto.c21.MyBean6;
+import com.example.spring.dto.c21.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("main21")
@@ -82,7 +80,41 @@ public class Controller21 {
         System.out.println("System.identityHashCode(m) = " + System.identityHashCode(m));
         System.out.println("System.identityHashCode(m) = " + System.identityHashCode(a));
 
+    }
+    @GetMapping("sub8")
+    public void g8() {}
 
+
+    @PostMapping("sub9")
+    public void p9(MyBean8 b ){
+//            model.addAttribute("myBean8", b);
+
+
+    } @GetMapping("sub10")
+    public String g10(RedirectAttributes rttr) {
+        MyBean8 m = new MyBean8("범근", 3.14, 22);
+//        m.setAge(22);
+//        m.setUserName("범근");
+//        m.setScore(3.14);
+        rttr.addFlashAttribute("data", m);
+        return "redirect:/main21/sub11";
+    }
+
+
+    // @ModelAttribute 가 적용된 메소드 아규먼트를
+    // Model에서 찾고 있으면 Model에서 꺼내서 사용
+
+    // 없으면 객체를 생성한 후 사용
+    // , 이 때 사용하는 생성자는 유일한 생성자 이거나 기본 생성자
+
+    // 특별한 이유가 없다면 ModelAttribute로 사용되는
+    // 메소드 아규먼트는 기본생성자(no-args)가 있어야함
+    @GetMapping("sub11")
+    public String g11(@ModelAttribute("data") MyBean8 p) {
+        System.out.println("data = " + p);
+        return null;
     }
 
 }
+
+
