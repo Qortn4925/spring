@@ -62,6 +62,10 @@ public class Controller02 {
     }
 
     @RequestMapping("/main2/sub6")
+
+
+
+
     public void sub6(WebRequest request) {
         String [] hobby= request.getParameterValues("hobby");
         for(int i = 0; i <hobby.length; i++) {
