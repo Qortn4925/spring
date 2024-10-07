@@ -34,3 +34,5 @@ select customername
 from Customers;
 
 
+SELECT  CustomerName,ContactName,Address
+FROM Customers;
