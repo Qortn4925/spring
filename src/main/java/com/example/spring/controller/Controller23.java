@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -50,5 +51,102 @@ public class Controller23 {
         }
 
 
+    }
+
+
+    @GetMapping("sub2")
+    public void sub2(Model model) throws SQLException {
+        String sql="SELECT CustomerName FROM Customers";
+
+        String databaseurl="jdbc:mariadb://localhost:3306/w3schools";
+        String databaseuser="root";
+        String databasepassword="1234";
+        Connection con = DriverManager.getConnection(databaseurl,databaseuser,databasepassword);
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        try(con; stmt; rs) {
+            List<String> list = new ArrayList<>();
+            while (rs.next()) {
+                String name = rs.getString("CustomerName");
+                list.add(name);
+            }
+            model.addAttribute("nameList", list);
+        }
+    }
+
+    @GetMapping("sub3")
+    public void sub3(Model model) throws SQLException {
+        String sql="SELECT ProductName FROM Products";
+        String url="jdbc:mariadb://localhost:3306/w3schools";
+        String userName="root";
+
+
+
+
+
+        String passWord="1234";
+
+        Connection con = DriverManager.getConnection(url,userName,passWord);
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        try(con; stmt; rs) {
+            List<String> list = new ArrayList<>();
+            while(rs.next()){
+                String name = rs.getString("ProductName");
+                list.add(name);
+            }
+            model.addAttribute("nameList", list);
+        }
+    }
+
+    @GetMapping("sub4")
+    public void sub4(Model model) throws SQLException {
+        String sql = """
+                SELECT DISTINCT Country
+                FROM Customers
+                """;
+
+        String url="jdbc:mariadb://localhost:3306/w3schools";
+        String userName="root";
+        String passWord="1234";
+        Connection con = DriverManager.getConnection(url,userName,passWord);
+        Statement stmt = con.createStatement();
+        ResultSet resultSet = stmt.executeQuery(sql);
+
+        try(con; stmt; resultSet) {
+            List<String> list = new ArrayList<>();
+            while (resultSet.next()) {
+                String country = resultSet.getString("Country");
+                list.add(country);
+            }
+            model.addAttribute("countryList",list);
+        }
+
+    }
+
+    @GetMapping("sub5")
+    public String sub5(RedirectAttributes rttr) throws SQLException {
+        String sql = """
+                SELECT distinct Country
+                 from Suppliers
+                 """;
+
+        String url="jdbc:mariadb://localhost:3306/w3schools";
+        String userName="root";
+        String passWord="1234";
+        Connection con = DriverManager.getConnection(url,userName,passWord);
+        Statement stmt = con.createStatement();
+        ResultSet resultSet = stmt.executeQuery(sql);
+        try(con; stmt; resultSet) {
+            List<String> list = new ArrayList<>();
+            while (resultSet.next()) {
+                String country = resultSet.getString("Country");
+                list.add(country);
+            }
+
+            rttr.addFlashAttribute("countryList1",list);
+
+            return  "redirect:/main23/sub4";
+        }
     }
 }
