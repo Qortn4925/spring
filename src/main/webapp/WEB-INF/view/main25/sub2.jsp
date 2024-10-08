@@ -18,7 +18,11 @@
   <ul>
     <c:if test="${not empty productList}" >
       <c:forEach items="${productList}" var="item">
-<%--        <li> ${item.productName}의 가격은 == ${item.price}</li>--%>
+<%--        <li> ${item.productName}의 가격은 == ${item.price}<
+
+
+
+/li>--%>
         <li>${item.productName} + ${param.price}</li>
       </c:forEach>
     </c:if>
