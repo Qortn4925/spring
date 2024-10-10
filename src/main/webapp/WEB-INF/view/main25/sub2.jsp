@@ -17,6 +17,7 @@
   <h3> ${param.price}가격들의 상품들입니다</h3>
   <ul>
     <c:if test="${not empty productList}" >
+      <jsp:useBean id="productList" scope="request" type="java.util.List"/>
       <c:forEach items="${productList}" var="item">
 <%--        <li> ${item.productName}의 가격은 == ${item.price}<
 
