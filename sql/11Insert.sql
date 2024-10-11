@@ -32,3 +32,6 @@ INSERT INTO  Products(ProductID ,price) value  (78,12.11);
 
 select *
 from Products;
+
+select *
+from Customers;
