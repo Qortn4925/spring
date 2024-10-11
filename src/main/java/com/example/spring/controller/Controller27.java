@@ -247,6 +247,10 @@ public class Controller27 {
         Connection con = dataSource.getConnection();
         PreparedStatement pstmt = con.prepareStatement(sql);
         Integer offset = (pageNumber - 1) * pageCount;
+
+
+
+
         pstmt.setInt(1, offset);
         pstmt.setInt(2, pageCount);
         ResultSet rs = pstmt.executeQuery();
