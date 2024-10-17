@@ -27,3 +27,25 @@ from my_table50;
 
 select count(name)
 from my_table50;
+
+SELECT *
+FROM my_table50;
+SELECT COUNT(id)
+FROM my_table50;
+SELECT SUM(id)
+FROM my_table50;
+SELECT AVG(id)
+FROM my_table50;
+SELECT MIN(id)
+FROM my_table50;
+SELECT MAX(id)
+FROM my_table50;
+
+SELECT SUM(IFNULL(id, 0))
+FROM my_table50;
+SELECT AVG(IFNULL(id, 0))
+FROM my_table50;
+SELECT MIN(IFNULL(id, 0))
+FROM my_table50;
+SELECT MAX(IFNULL(id, 0))
+FROM my_table50;
