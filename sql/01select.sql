@@ -25,4 +25,16 @@ select * from Orders;
 # 이러면 날짜별 주문 건수
 select count(OrderID) 주문수, count(CustomerID) 손님수, count(ShipperID), OrderDate
 from Orders
-group by  OrderDate
+group by  OrderDate;
+
+
+select *
+from Customers;
+
+select *
+from Employees;
+
+
+
+
+
