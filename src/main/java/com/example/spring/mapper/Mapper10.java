@@ -104,7 +104,7 @@ public interface Mapper10 {
     @Select("""
                     <script>
                     select * from Customers 
-                    where CustomerId &lt 5
+   
                     </script>
             """)
     List<Object> select7();
