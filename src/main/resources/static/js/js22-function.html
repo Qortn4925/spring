@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function func1(){
+    console.log("hello");
+    console.log("hello1");
+    console.log("hello2");
+  }
+  //  return 함수 종료 :, 값을 호출하 ㄴ곳으로 반환
+  function fun2(){
+    console.log("hi")
+    console.log("함수")
+    return
+    console.log("또 다른 코드")
+  }
+  function  fun5(a){
+    return a/2;
+  }
+
+  console.log(fun5(10));
+  console.log(fun5(90));
+  console.log(fun5(100));
+  fun2();
+  function  fun6(){
+    console.log("a")
+  }
+
+  let hhh = () => console.log("a");
+  hhh();
+
+  let ret1= a=>2*a;
+  console.log(ret1(5));
+
+</script>
+</body>
+</html>

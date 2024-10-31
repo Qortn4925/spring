@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--   함수 (function): 나중에 실행되기 위한 코드 블럭-->
+// 함수 정의 방법 3가지 , lowerCamelCase
+// 이름 있는 함수  함수 호출부 보다 선언부가 늦게 나와도 가능
+// 이름 없는 함수
+//  arrow fucntion     , 함수는 값
+// 이름 있는 함수
+function nameFunction(){
+  console.log("nameFunction1")
+}
+
+const noName = function (){
+  console.log("noName2")
+}
+
+let b;
+const a = ( b=5)=>{
+  console.log("lambda"+(b+1) )
+}
+
+nameFunction()
+console.log(noName())
+a()
+
+function myFunction2(){
+  console.log("myf2");
+}
+
+myFunction2()
+
+</script>
+
+</body>
+</html>
