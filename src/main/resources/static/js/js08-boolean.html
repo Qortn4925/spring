@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = true;
+  let b= false;
+  //truthy
+  //falsy: undefined, null, " ", 0,false,NaN
+
+  if (false){
+    console.log(1);
+  }else {
+    console.log(2);
+  }
+  if(undefined){
+    console.log(3);
+  }else {
+    console.log(4);
+  }
+
+  let c = 5%0;// NaN
+  console.log(c);
+  if (c){
+
+
+
+    console.log(1);
+  }else {
+    console.log(2);
+  }
+
+ let d="";
+ if (d){
+   console.log(1);
+ }else {
+   console.log(2);
+ }
+ if (null){
+   console.log(1)
+ }else{
+   console.log(2)
+ }
+
+  if ([]) {
+    console.log(21)
+  } else {
+    console.log(22)
+  }
+
+  if ({}) {
+    console.log(23)
+  } else {
+    console.log(24)
+  }
+
+
+</script>
+
+</body>
+</html>
