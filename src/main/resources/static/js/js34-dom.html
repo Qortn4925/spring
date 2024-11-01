@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<div class="box1">
+  <ul>
+    <li>Lorem.</li>
+    <li>Eos.</li>
+    <li>Beatae!</li>
+  </ul>
+</div>
+<div class="box2">
+  <ul>
+    <li>Lorem.</li>
+    <li>Facere.</li>
+    <li>Tempora!</li>
+  </ul>
+  <!--
+        <h2> hello </h2>
+        <ul>
+            <li>hi</li>
+            <li>Lorem.</li>
+            <li>Perspiciatis.</li>
+            <li>Enim?</li>
+            <li>dom</li>
+        </ul>
+        <p> world </p>
+    -->
+</div>
+
+
+
+
+
+<script>
+
+  let a =  document.querySelector("ul")
+  //append 마지막 자식
+  //prepend 첫번째 자식
+  // after 동생   내 기준 뒤
+  // before 형   내 기준 앞
+
+  let b= document.createElement("p");
+  b.innerText="p 요소"
+  let c = document.createElement("li");
+  c.innerText="li 요소1ㄴ"
+  let d = document.createElement("h1");
+  d.innerText="h1 요소"
+  let e = document.createElement("li");
+  e.innerText = "li2 ";
+
+  a.append(c);
+  a.prepend(e);
+
+  // box2 자손 , h2, ul ,p
+
+  // ul 자손 ,5 ,
+
+  let box3=document.querySelector("#box2");
+  box3.append(document.createElement("h2").innerText="hello")
+  box3.append(document.createElement("ul"));
+  box3.append(document.createElement("p"));
+  let aa =document.querySelector("ul");
+   aa[1].prepend(document.createElement("li").innerText="lorem");
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="box1">
+    <ul>
+        <li>
+        <li>Lorem.</li>
+        <li>Animi?</li>
+        <li>Repudiandae!</li>
+        </li>
+    </ul>
+</div>
+
+<div id="box2">
+    <ul>
+        <li>
+        <li>Lorem.</li>
+        <li>Praesentium.</li>
+        <li>Veritatis!</li>
+        </li>
+    </ul>
+</div>
+<script>
+    let a =document.querySelector("#box1");
+    console.log(a)
+    console.log(a.parentElement);
+    console.log(a.children)
+    let b = a.nextElementSibling;
+    console.log(b)
+     let ul1= document.querySelector("ul");
+     let ul2 = ul1.nextElementSibling;  // 부모가 같지 않아서
+    console.log(ul2);
+
+
+</script>
+</body>
+</html>

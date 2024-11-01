@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> 제목임</h1>
+<button> click  me ! ! ! !  !</button>
+
+<button id="btn2"> button2</button>
+
+<input  id="input1" type="text">
+<script>
+  //
+  let a = document.querySelector("button");
+  console.log(a)
+  //on 이벤트명 ! 속성에 함수를 할당
+  a.onclick = function (){
+    console.log("버튼 클릭됨!")
+  }
+  //오른쪽 버튼 클릭시
+  a.oncontextmenu = function (){
+    console.log("오른쪽 버튼 클릭됨")
+  }
+
+  //모름
+let b = document.querySelector("#btn2");
+  // b.onclick=function (){
+  //   console.log("두번재 버튼 클릭")
+  // }
+
+  //addEventListener
+b.addEventListener("click",function(){
+     console.log('두번째 버튼 클릭됨######');
+})
+  b.addEventListener("contextmenu",function (){
+    console.log("두번째 버튼 오른쪽클릭됨");
+  })
+
+  let c = document.querySelector("h1");
+c.addEventListener("click",function (){
+  console.log("제목 클릭됨")
+})
+  let d = document.querySelector("#input1");
+d.addEventListener("keyup",function(){
+  console.log("input요소에서 키보드 땜");
+  let a= document.querySelector("#input1")
+  console.log(a);
+     document.querySelector("h1").innerText=a.value
+})
+
+
+</script>
+
+</body>
+</html>
