@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="input1">
+<button id="btn1">+</button>
+<button id="btn2">-</button>
+<div>
+  <ul id="list1"> </ul>
+
+</div>
+
+<script>
+let text = document.querySelector("#input1");
+
+let btn1= document.querySelector("#btn1");
+btn1.addEventListener("click",function (){
+   // 인풋 텍스트가
+  let ul=document.querySelector("#list1")
+  let createli=document.createElement("li")
+   createli.innerHTML=text.value;
+  ul.append(createli);
+  text.value="";
+
+})
+
+document.querySelector("#btn2").addEventListener(
+        "click",function (){
+          document.querySelector("#list1>li:last-child").remove()
+        }
+)
+
+</script>
+</body>
+</html>

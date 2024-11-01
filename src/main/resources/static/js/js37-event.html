@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="btn1">
+버튼
+</button>
+<button id="btn2">
+  버튼
+</button>
+
+
+<ul id="list1"></ul>
+
+<script>
+  let bt1 =document.querySelector("#btn1");
+  bt1.addEventListener("click",function (){
+    let l = document.querySelector("#list1");
+    let i= document.createElement("li");
+    i.innerHTML="홀";
+    l.append(i);
+  })
+
+  let bt2=document.querySelector("#btn2");
+  bt2.addEventListener("click",function (){
+    let j =document.querySelector("#list1")
+    let asd=document.createElement("li")
+    asd.innerText="짝";
+    j.append(asd);
+  })
+</script>
+</body>
+</html>
