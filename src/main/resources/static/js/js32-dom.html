@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="para1">Lorem ipsum dolor.</p>
+<p id="para2">Itaque, laborum quisquam?</p>
+
+<ul id="list1">
+
+</ul>
+<script>
+  // innerHtml: 내부 컨텐츠
+  // innerText : 내부 텍스트
+  let a = document.querySelector("#para1");
+  let b = document.querySelector("#para2");
+  console.log(a.innerHTML);
+  a.innerHTML="hello <b> world</b>";
+  b.innerText = "hello<b>world</b>";
+  let c = document.querySelector("#list1");
+  c.innerHTML="<li>1 </li> <li> 2</li> <li> 3</li>"
+  // 여기서 li 하나 더 추가하기 줜나리 귀찮음 ,  append 이용
+  let e = document.querySelector("#list1");
+  e.append("<li>append</li>");
+  // 새 요소 만들기
+let newel=  document.createElement("li");   // > 이게 li 여는 태그 닫는 태그 만든거임
+    newel.innerText="new.append";         // 거기 텍스트 안에
+    e.append(newel);
+
+</script>
+
+</body>
+</html>

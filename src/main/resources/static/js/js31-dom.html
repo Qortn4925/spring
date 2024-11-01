@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="para1" class="note">Lorem.</p>
+<p id="para2" class="note">Dignissimos.</p>
+
+<p class="note error">Lorem.</p>
+<p class="note error">Corporis.</p>
+
+<p class="error">Lorem.</p>
+<p class="error">Fugiat?</p>
+<script>
+  // querySelector 문서에서 선택된 하나의 요소 리턴
+  let a = document.querySelector("#para1");
+  console.log(a);
+
+  let b = document.querySelector(".note");
+  console.log(b)
+  let c = document.querySelector(".error");
+  console.log(c)
+
+  let d = document.querySelectorAll(".note");
+  console.log(d);
+  console.log(d[0],d[1],d[2],d[3]);
+
+  let e  = document.querySelectorAll(".error")
+  e[1].innerHTML = "BBBBBB";
+  e[3].style.color="red";
+  e[3].innerHTML="asdsad";
+  document.querySelector(".note.error").innerHTML="로렘"
+  document.querySelector(".note.error").style.color="red"
+
+
+</script>
+
+</body>
+</html>
