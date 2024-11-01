@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--   값을 넣어 주지 않으면 undefine-->
+ //  객체 생성시에 없던 , 속성을 출력하면 unde,    객체 생성시에 없던 속성을 추가 할 수 있다
+  let a = {name:"son", age:33};
+  console.log(a.name);
+  console.log(a.age);
+  console.log();
+  a.name="min";
+console.log(a.name);
+a.name=3;
+console.log(a.name);
+a.city="seoul"
+console.log(a.city);
+
+a.fun1= function() {
+  console.log("a.fun")
+} ;
+a.fun2 = ()=>{
+  console.log(a.name)
+}
+a.fun1()
+a.fun2();
+</script>
+
+</body>
+</html>

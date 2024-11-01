@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+// 객체 : 속성과 기능이 있는 타입
+
+let a =3 ;
+let b= "hi";
+let c ={name:"son", age:33,address:"seoul"}  ;   // 객체 생성
+// {속성명:속성값}     name , age, address 속성 (property)
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+//각 속성 탐색  .
+console.log(c.age, c.name, c.address);
+console.log(c["age"]);
+
+// 연습 :  ^ㅣ ㅂㅂㄹ
+let d ={email:"q@",location:"서울",married:true,score:3.14};
+console.log(d)
+
+
+// 기능,   값이 함수인 속성 그냥  함수 선언하듯이 쓰는데 ,  속성 : 함수기술방법
+let f ={
+  name:"lee",
+  age:22 ,
+  info: function (){
+    console.log("f.fun");
+  }
+}
+
+console.log(f.info);
+console.log(f.info())
+
+let e = {
+  hello: () => {
+    console.log("say hello");
+  },
+  greeting : () => {
+    console.log("say");
+  }
+}
+
+let of={
+  height:100,
+  weight:150,
+  jump:(a)=>{
+    console.log(a*1.5);
+  },
+  run: ()=>{
+    console.log("150cm 에 100kg는 뛰는게 불가능")
+  },
+  work:()=>{
+    console.log("일하느중")
+  }
+}
+
+console.log(of.height, of.weight , of.run() , of.jump(of.height), of.work())
+
+</script>
+
+</body>
+</html>
