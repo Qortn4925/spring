@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input1">
+
+<button id="btn1">+</button>
+
+<div>
+  <ul id="list1"></ul>
+</div>
+
+<script>
+  let count =0;
+  document.querySelector("#btn1")
+  .addEventListener("click",function (){
+    const text = document.querySelector("#input1").value;
+    const li = document.createElement("li");
+    li.innerText=text;
+    const deleteButton=document.createElement("button#btn"+count);
+    console.log(deleteButton)
+    deleteButton.innerText="-";
+    document.querySelector("#list1").append(li);
+    li.append(deleteButton);
+    deleteButton.addEventListener("click",function (){
+      // deleteButton.parentElement.remove();
+      document.querySelector("#btn"+count).remove();
+count++;
+    })
+  })
+
+
+</script>
+</body>
+</html>
