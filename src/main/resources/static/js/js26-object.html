@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a =3 ;
+    let b =a;
+
+    a= 5;
+    console.log(a, b);
+    let c ={age:55};
+    let d =c;
+    console.log(c.age,d.age);
+    c.age=11;
+    console.log(c.age,d.age)
+    c.fill="ab";
+    console.log(c.fill,d.fill);
+
+     let f = {
+       name:"son",
+       info:{
+         height:200,
+         weight:300
+       }
+     };
+
+     let g =  {};
+     g.name=f.name;
+     g.info=f.info;
+     f.name="sin"
+    console.log(f.name,g.name)
+    f.info.height=100;
+    console.log(f.info.height,g.info.height);
+</script>
+
+</body>
+</html>

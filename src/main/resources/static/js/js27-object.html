@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  function fun1(){
+    return{
+      name:"son",
+      age:33
+    }
+  }
+  a=fun1();
+  console.log(a.name);
+
+  a.name=13;
+  console.log(a.name);
+  b= fun1();
+  console.log(b.name);
+
+  function fun2 (){
+    let a = {
+      city: "seoul"
+    };
+    return function () {
+      // fun2의 객체 , a 리턴
+      return a;
+    };
+  }
+  let c = fun2();
+
+  console.log(c())
+  let d = c();
+  let e = c();
+  d.city="london";
+  console.log(e.city,d.city)
+
+
+
+</script>
+
+</body>
+</html>
