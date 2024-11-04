@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Lorem.</p>
+<p>Optio.</p>
+<p>Possimus?</p>
+<p>Dolor.</p>
+<p>Earum.</p>
+<script>
+  //for, for of    , forEach
+
+  let a =  [3,1,4,1,5,9,2];
+  a.forEach( (e) => {
+    console.log(e);
+  })
+  let b=  ["son","lee","faker","kim"];
+  b.forEach((e)=>{
+    console.log(e);
+  })
+   // 값 , 인덱스
+  b.forEach((v,i) =>{
+
+  })
+
+  let c= ["son","lee","faker","kim"];
+  c.forEach((v,i)=>{
+    console.log(i+1,v);
+  })
+
+  let parray= document.querySelectorAll("p");
+
+  parray.forEach( (elem) =>{
+    elem.addEventListener("click",()=>{
+      console.log(elem.innerText);
+    })
+
+  })
+</script>
+
+</body>
+</html>

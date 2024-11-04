@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Lorem.</p>
+<p>Deleniti.</p>
+<p>Odio.</p>
+<p>Assumenda!</p>
+<p>Rerum.</p>
+
+<input type="text">
+
+<div>
+
+
+</div>
+<script>
+  let pa =  document.querySelectorAll("p");
+  let a = document.querySelector("input");
+   pa.forEach((elem)=>{
+      elem.addEventListener("click",()=>{
+        // a.value =elem.textContent;
+        a.innerText=elem.textContent
+        console.log(a);
+      } )
+  });
+
+</script>
+</body>
+</html>
