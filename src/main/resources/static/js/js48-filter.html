@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+
+  // find > 하나 ,
+  // filter >  조건 해당 전부 . 순서는 앞에 인덱스 부터
+
+  let a= [3,1,4,1,5,9,2];
+  let f1 = a.find(e => e%3===0);
+  console.log(f1);
+
+  let f2 = a.filter(e=>e%3===0)
+  console.log(f2);
+
+  let f3 =a.filter(e=>e===1);
+  console.log(f3);
+  let f4 =a.filter(e=>e%2===0)
+  console.log(f4);
+
+  let b = ["hankang","faker","rose","son","apt"];
+
+  let bf1=b.filter(e=>e.length===3);
+  console.log(bf1);
+  let bf2=b.filter(e=>e.length>3);
+  console.log(bf2);
+  let bf3=b.filter(e=>e.length%2===1);
+  console.log(bf3)
+
+
+</script>
+
+</body>
+</html>

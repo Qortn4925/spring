@@ -4,36 +4,69 @@
   <meta charset="UTF-8">
   <title>Title</title>
 </head>
+
+<input type="text" id="input1">
+<button id="btn1"> 찾기 </button>
+<button id="btn2"> 리셋</button>
+
+<ul id="box">
+
+
+</ul>
 <body>
 
 <script>
+  let arr = [
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quasi.",
+    "Assumenda beatae ducimus enim est itaque minus nam necessitatibus totam.",
+    "Blanditiis consequatur ducimus harum, ipsum molestiae nisi totam ut veritatis.",
+    "Consequuntur dolore eveniet expedita natus quibusdam recusandae sunt. Dolore, laborum.",
+    "Alias, eaque ex hic minima perspiciatis rem sapiente totam voluptas.",
+    "Asperiores itaque mollitia nesciunt? Facere obcaecati, porro. Exercitationem, id, illo?",
+    "Aperiam autem cupiditate esse exercitationem ipsam placeat, possimus ullam ut?",
+    "Delectus fugiat praesentium quis rerum! Cumque eligendi molestias nostrum! Laudantium!",
+    "Animi asperiores consectetur corporis harum in ipsum laborum quibusdam similique?",
+    "Aliquam commodi dolores doloribus esse ipsam iste nesciunt veritatis voluptate."
+  ]
 
-  // find > 하나 ,
-  // filter >  조건 해당 전부 . 순서는 앞에 인덱스 부터
-
-  let a= [3,1,4,1,5,9,2];
-  let f1 = a.find(e => e%3===0);
-  console.log(f1);
-
-  let f2 = a.filter(e=>e%3===0)
-  console.log(f2);
-
-  let f3 =a.filter(e=>e===1);
-  console.log(f3);
-  let f4 =a.filter(e=>e%2===0)
-  console.log(f4);
-
-  let b = ["hankang","faker","rose","son","apt"];
-
-  let bf1=b.filter(e=>e.length===3);
-  console.log(bf1);
-  let bf2=b.filter(e=>e.length>3);
-  console.log(bf2);
-  let bf3=b.filter(e=>e.length%2===1);
-  console.log(bf3)
+  const box = document.querySelector("#box");
+   arr.forEach(e =>{
+      const li =document.createElement("li");
+      li.innerText=e;
+      box.append(li);
+   })
 
 
+// document.querySelector("#input1").addEventListener("keyup")  >> 키보드에
+  document.querySelector("#btn1").addEventListener("click",()=>{
+    let inputText= document.querySelector("#input1").value;
+    let copyArr= arr.filter(i=>i.includes(inputText));
+
+    document.querySelectorAll("#box>li").forEach( a=>{
+      a.remove();
+    })
+
+      copyArr.forEach(item => {
+        const li = document.createElement("li")
+        li.innerText=item;
+        box.append(li);
+      })
+
+  })
+
+  document.querySelector("#btn2").addEventListener("click",e=>{
+    document.querySelectorAll("#box>li").forEach( a=>{
+      a.remove();
+    })
+
+    arr.forEach(e =>{
+      const li =document.createElement("li");
+      li.innerText=e;
+      box.append(li);
+    })
+    document.querySelector("#input1").value="";
+
+  })
 </script>
-
 </body>
 </html>
