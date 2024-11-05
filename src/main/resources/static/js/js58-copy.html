@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // object
+  // {prop: val1,}
+  const a =  {name:"rose",song:"apt"};
+  const b = a;  // 참조값 복사
+  console.log(a,b);
+  b.name="bruno";
+  console.log(a,b);
+  // 고전적
+  const c = {};
+  c.name=a.name;
+  c.song=a.song;
+  c.name="han";
+  console.log(c,a);
+
+  // 객체 프로퍼티 접근법
+  console.log(a.name);
+  console.log(a.song);
+  console.log(a["name"]);
+  //for in   in 다음 에 기술된 객체의 프로퍼티명들을 탐색 (순서 보장 x)
+  for ( const p in  a) {
+
+    console.log(p ,a[p]);
+  }
+  //for in 사용 복사 !
+  const d = {};
+  for (const k in a ){
+    d[k] = a[k];
+  }
+
+  console.log(a);
+  console.log(d);
+  d.name="si"
+  console.log(a,d)
+
+  // 연습 !!
+  const e = {city:"london",age:33,email:"gmail"};
+  const f = {};
+  for (const prname  in e){
+    f[prname]=e[prname];
+  }
+  f.city ="seoul";
+  console.log(e);
+  console.log(f);
+
+</script>
+</body>
+</html>

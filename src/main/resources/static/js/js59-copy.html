@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  // spread (...)
+  const a = [3,1,4];
+  const b= [...a];
+
+  const c = {name:"son",city:"london"};
+  const d = {...c};  // 얕은 복사 !
+
+  console.log(c);
+  console.log(d);
+
+  d.name="lee";
+  // 연습 : 객체 복사 !
+  const e  = {address:"seoul",age:55,married:true};
+  const f1 ={};
+  const f ={...e};
+  console.log(f);
+  for (const fKey in f) {
+      f1[fKey]=f[fKey];
+  }
+  console.log(f1);
+
+  // spread 연산자 활용
+  // spread 를 사용하여 입력했는데 , 프로퍼티명이 겹친다면
+  //늦게 작성한걸로 사용됨
+  const g = {name: "rose", song:"apt"};
+  const h = {address:"seoul",age:22};
+  const i = {...g,...h};
+  // 이게 second 뜨니까 , >   스프레드도 안되는거임  그안에 그냥 뿌려놓는거라
+  const hh ={name:"first",name:"second"};
+  console.log(hh)
+  console.log(i)
+
+  // 연습
+  const r = {team:"t1",address:"seoul"};
+  const s = {name:"faker",age:33};
+  // 코드 작성
+
+  const test ={...r,...s,age:44,married:false};
+  console.log(test)
+
+
+</script>
+
+</body>
+</html>
