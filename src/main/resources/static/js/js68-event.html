@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn1">1</button>
+<button id="btn2">2</button>
+<button id="btn3" onclick="console.log('세번째 버튼 클릭')">3</button>
+<button id="btn4">4</button>
+<button id="btn5">5</button>
+
+<div>
+    <input type="text" id="input1">
+</div>
+<div>
+    <input type="text" id="input2">
+</div>
+<div>
+    <input type="text" id="input3" onkeyup="console.log(`${input3.value}`)">
+</div>
+<div>
+    <input type="text" id="input4">
+</div>
+<div>
+    <input type="text" id="input5">
+</div>
+<div>
+    <input type="text" id="input6">
+</div>
+<div>
+    <input type="text" id="input7">
+</div>
+
+<p>Lorem ipsum dolor.</p>
+<p>Aut beatae, officia!</p>
+<p>Accusantium, dolore explicabo?</p>
+<p>Architecto, inventore quis?</p>
+<p>Distinctio labore, unde.</p>
+
+
+<script>
+//event listener 정의
+// addEvent Listener
+
+// onClick(property)
+
+//onclick(attribute)
+
+document.querySelector("#btn1").addEventListener("click",()=>{
+  console.log("버튼1 클릭");
+})
+
+// 객체 프로퍼티에 ,  함수 넣어주기
+document.querySelector("#btn2").onclick = ()=>{
+  console.log("버튼 2 클릭")
+}
+
+//  input1 에 keyup 이벤트 발생시 , input에 입력된 값을 > 콘솔에 출력
+
+let input1 = document.querySelector("#input1");
+ input1.addEventListener("keyup",()=>{
+   console.log(input1.value);
+})
+
+let input2 = document.querySelector("#input2");
+ input2.onkeyup = ()=>{
+   console.log(input2.value);
+ }
+const inputList = document.querySelectorAll(`#input4,#input5`);
+    for (const elem of inputList){
+      elem.addEventListener("keyup",()=>{
+        console.log(elem.value);
+      })
+    }
+
+const inputList2 = document.querySelector("#input6,#input7");
+
+    // 이벤트리스너에 들어갈 , 함수에 파라미터 만들면 >
+// 이벤트 핸들러 메소드를 실행하면 첫 번쨰 파라미터에 , event 객체를 만들어소 넣어줌
+
+    function fun1(e){
+      //  > log 읽어보면 > target attribute에 , target있는데 > 그거 보면 , 아이디 알수 있음
+      console.log(e.target.value);
+    }
+
+document.querySelector("#input6").addEventListener("keyup",fun1)
+document.querySelector("#input7").addEventListener("keyup", fun1);
+
+    // p 클릭 될때 콘솔에 춫력 
+function  fun2(e) {
+  console.log(e.target.innerText);
+}
+document.querySelectorAll("p").forEach((i)=>{
+    i.addEventListener("click",fun2);
+})
+document.querySelectorAll("p").forEach((i)=>{
+  i.addEventListener("click",(e)=>{
+    console.log(e.target.innerText);
+  });
+})
+
+const test = fun2;
+console.log(test)
+</script>
+</body>
+</html>

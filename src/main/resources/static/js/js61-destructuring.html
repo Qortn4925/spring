@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  const a = [3,1,4];
+  const n1 =a[0];
+  const n2=a[1];
+  const n3=a[2];
+  console.log(n1,n2,n3);
+
+  const [x,y,z] =a;
+  console.log(x,y,z);
+  // 길이가 다를떄 , 부족 > 할당 x , 넘치면  undefined
+  const [s,t,c,k="hello"] = a;
+  console.log(s,t,k);
+
+
+
+
+  console.log(s,t)
+  const[a1,a2,a3,a4]=a;
+  console.log(a1,a2,a3,a4);
+
+  //연습
+  const b = ["faker","apt"];
+  // 코드 작성
+  const [b1,b2]=b;
+  console.log(b1,b2);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+  // destructuring assgnment
+  function  fun1(){
+    return ["faker","son","han"];
+  }
+
+ const a= fun1();
+  console.log(a);
+  const [a1,a2,a3]=fun1();
+  console.log(a1,a2,a3);
+
+  function  fun2(){
+    const a= "rose";
+    const b = ()=>{
+      console.log("apt apt");
+    }
+    const c = "blackpink";
+    return[a,b,c];
+  }
+
+  // 코드 작성
+const[n1,n2,n3]=fun2();
+  console.log( n1,n3); // rose ,blackpink
+  n2(); // 콘솔에 apt 출력
+
+</script>
+
+</body>
+</html>

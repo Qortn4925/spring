@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+  // destructring assignment
+  const a ={name:"son",city:"seoul"};
+   const b = a.name;
+   const c = a.city;
+
+  console.log(b,c)
+
+  const {name:x,city:y}=a;
+  console.log(x,y)
+
+  const d = {age: 44,song:"apt"};
+  const {age:s,song:t}=d;
+  console.log(s,t);
+
+  const {age,song} =d;
+  const e =  {address:"london",email:"gmail"};
+  const {address,email}= e;
+  console.log(address,email);
+
+  const f = {desc:"hi",greeting:"hello"};
+  // 없으면 default , 있으면 그거 씀
+  const {desc,greeting="mornig",weight=99}=f;
+  console.log(desc,greeting,weight);
+
+  const g = {height:200,depth:7,nick:"son"};
+  const{height,depth,nick , password=1234}=g;
+  // 코드 작성
+  console.log(height,depth,nick,password);
+
+</script>
+
+</body>
+</html>
