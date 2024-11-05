@@ -1,4 +1,4 @@
-package cote.firstweek;
+package cote.w1;
 
 public class q125 {
 

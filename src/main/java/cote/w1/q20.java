@@ -1,6 +1,4 @@
-package cote.firstweek;
-
-import java.util.Stack;
+package cote.w1;
 
 public class q20 {
 
