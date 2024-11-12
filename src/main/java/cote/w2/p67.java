@@ -1,6 +1,7 @@
 package cote.w2;
 
 public class p67 {
+    /*
     public String addBinary(String a, String b) {
         int arr[]= new int [a.length()>b.length()?a.length()+1:b.length()+1];
         int count =0;
@@ -35,4 +36,6 @@ public class p67 {
         }
 
     }
+
+     */
 }
