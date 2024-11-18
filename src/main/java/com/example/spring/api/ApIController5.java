@@ -64,6 +64,7 @@ public class ApIController5 {
     public Book sub8(){
         Book book = new Book();
         book.setPrice(50000);
+
         book.setAuthor("헬로우");
         book.setContent("껄껄");
         book.setTitle("제목");
