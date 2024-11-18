@@ -22,6 +22,7 @@ public class ApiController9 {
 
     @GetMapping("sub1")
     public String sub1() {
+
         JwtClaimsSet claims = JwtClaimsSet.builder().
         issuer("self")    // 누가만듬
                 .subject("son")  // 누구꺼
@@ -35,7 +36,9 @@ public class ApiController9 {
         // 누구껀지
         // 언제 만들었고
         // 언제 까지인지
-
+        System.out.println(jwtEncoder
+                .encode(JwtEncoderParameters.from(claims))
+                .getTokenValue());
         return  jwtEncoder
                 .encode(JwtEncoderParameters.from(claims))
                 .getTokenValue();
