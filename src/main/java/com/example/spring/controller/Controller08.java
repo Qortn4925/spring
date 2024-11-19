@@ -54,7 +54,6 @@ public class Controller08 {
         model.addAttribute("countries", new String[]{"korea","japan","us"});
         model.addAttribute("islands",new String[]{"제주","울릉도","독도"});
         model.addAttribute("points", new double[]{3.14, 9.432, 8.0101});
-
         return null;
     }
 

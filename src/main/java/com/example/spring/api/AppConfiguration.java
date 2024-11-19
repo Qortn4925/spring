@@ -9,6 +9,8 @@ import com.nimbusds.jose.proc.SecurityContext;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
@@ -20,6 +22,7 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 
 @Configuration
+@EnableMethodSecurity
 public class AppConfiguration {
 
     @Value("classpath:secret/app.pub")
@@ -31,6 +34,7 @@ public class AppConfiguration {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         //  스프링 시큐리티 사용하면  모든 요청에 인증을 요구하는데 ,, 그거 덮어쓴거 뭔 말임
+        http.oauth2ResourceServer(configure -> configure.jwt(Customizer.withDefaults()));
         return http.build();
     }
 
