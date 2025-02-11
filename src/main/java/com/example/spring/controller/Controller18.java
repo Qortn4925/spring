@@ -74,6 +74,7 @@ public String sub7(HttpSession session){
     session.setAttribute("prodcutList", java.util.List.of("css","desk","chair"));
         return "redirect:/main18/sub8";
 }
+
     @RequestMapping("sub8")
     public String sub8(HttpSession session){
 

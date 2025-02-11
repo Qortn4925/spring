@@ -42,7 +42,6 @@ public class Controller25 {
             List<String> list =new ArrayList<>();
             try (con; stmt; rs) {
                 while (rs.next()) {
-
                     String name = rs.getString("CustomerName");
                     list.add(name);
                 }

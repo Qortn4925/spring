@@ -24,6 +24,9 @@ public class ApIController5 {
         return "sub1";   // jsp 사용할때는 web-inf.asdsa/sub1.jsp 찾아서 보여줌
     }
 
+
+
+
     @ResponseBody
     @GetMapping("sub3")
     public String sub3(){

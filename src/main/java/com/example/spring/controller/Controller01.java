@@ -17,7 +17,6 @@ public class Controller01 {
     }
 
     //localhost:8080/main1/some1
-
     @RequestMapping(path ="/main/some1")
     public  void method3(){
         System.out.println("Controller01.method3");

@@ -21,7 +21,7 @@ public class Controller7 {
     }
 
 
-    // sub1() 메소드와 같은 일을 할 건데 > modle로 
+    // sub1() 메소드와 같은 일을 할 건데 > model로
     @RequestMapping("sub2")
     public  void sub2(Model model){
         model.addAttribute("person", "이강인");
